@@ -2,8 +2,9 @@ package Personnages;
 
 public class Etre {
 	
-	private String nom;
-	private int  habileté,endurance;
+	private static String nom;
+	private static int  habileté;
+	private static int endurance;
 	
 	public Etre(){
 		setNom("Hero");
@@ -14,8 +15,8 @@ public class Etre {
 
 	public Etre(int habileté, int endurance,String nom){
 		this.setNom(nom);
-		this.habileté=habileté;
-		this.endurance=endurance;
+		Etre.habileté=habileté;
+		Etre.endurance=endurance;
 	}
 	
 	public String getNom() {
@@ -23,15 +24,15 @@ public class Etre {
 	}
 
 	public void setNom(String nom) {
-		this.nom = nom;
+		Etre.nom = nom;
 	}
 	
-	public int getHabilete(){
+	public static int getHabilete(){
 		return habileté;
 	}
 	
 	public void setHabilete(int habileté){
-		this.habileté=habileté;
+		Etre.habileté=habileté;
 	}
 
 	public int getEndurance(){
@@ -39,7 +40,7 @@ public class Etre {
 	}
 
 	public void setEndurance(int endurance){
-		this.endurance=endurance;
+		Etre.endurance=endurance;
 	}
 
 	
